@@ -8,8 +8,7 @@
             height: 200px;
             object-fit: cover;
         }
-
-        .unAvail {
+        .unAvail{
             color: #f2575b;
             font-size: 16px;
             font-weight: 500;
@@ -36,15 +35,13 @@
                 font-size: 8px !important;
             }
         }
-
-        .prod-info {
+        .prod-info{
             padding-left: 0px !important;
-
-            .prod-list {
-                font-size: 14px; list-style: none;
-
+            .prod-list{
+                font-size: 14px;
+                list-style: none;
+                
             }
-
             :before {
                 content: '.';
                 color: #878787;
@@ -67,28 +64,25 @@
     }
 }
 
-.price {
-    .today {
+.price{
+    .today{
         font-weight: 700;
     }
-
-    .rupee {
+    .rupee{
         font-size: 25px;
         font-weight: 500;
     }
-
-    .img-fluid {
+    .img-fluid{
         height: 20px;
         display: block;
     }
-
-    .offer {
+    .offer{
         color: rgb(38, 165, 65);
         font-size: 14px;
         font-weight: 700;
     }
 }
 
-.filter {
+.filter{
     filter: blur(1px) !important;
 }

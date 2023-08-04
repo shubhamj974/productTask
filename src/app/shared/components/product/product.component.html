@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12" *ngFor="let mob of mobileData">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3 d-flex align-items-center">
+                            <div class="img-content mb-3 mb-md-0">
+                                <img class="img-fluid" [src]="mob.image" [ngClass]="{'filter' : !mob.isAvailable}" [alt]="mob.brand" [title]="mob.brand">
+                                <p class="unAvail" *ngIf="!mob.isAvailable">Currently unavailable</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product-details">
+                                <h4 class="pri-heading">
+                                    {{mob.name}}
+                                </h4>
+                                <div class="rating-review mb-3">
+                                    <span class="star" [ngClass]="{'text-warning' : mob.star <= 4 , 'text-dark' : mob.star > 4.5}">{{mob.star}}
+                                        <i class="fas fa-star"></i>
+                                    </span>
+                                    <span class="reating rating-info">{{mob.rating}} Ratings</span>
+                                    <span class="space rating-info">&</span>
+                                    <span class="reviews rating-info">{{mob.review}} reviews</span>
+                                </div>
+                                <div class="specification">
+                                    <ul class="prod-info" >
+                                        <li class="prod-list"*ngFor="let list of mob.spicification"> {{list}} </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="price">
+                                <p class="rupee mb-0">
+                                    <i class="fas fa-rupee-sign"></i> {{mob.price}}
+                                </p>
+                                <small>Free delivery by <span class="today">Today</span></small>
+                                <img class="img-fluid"
+                                    src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png"
+                                    alt="">
+                                
+                                <p class="offer mb-0 mt-3">
+                                    Bank Offer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
